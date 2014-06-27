@@ -1,39 +1,8 @@
-// This is a test harness for your module
-// You should do something interesting in this harness
-// to test out the module and to provide instructions
-// to users on how to use it by example.
+var twitter = require('twitter.cc.nl');
+var res = twitter.share('Sharing a new tweet!');
 
-
-// open a single window
-var win = Ti.UI.createWindow({
-	backgroundColor:'white'
-});
-var label = Ti.UI.createLabel();
-win.add(label);
-win.open();
-
-// TODO: write your module tests here
-var sharetotwitter = require('twitter.cc.nl');
-Ti.API.info("module is => " + sharetotwitter);
-
-label.text = sharetotwitter.example();
-
-Ti.API.info("module exampleProp is => " + sharetotwitter.exampleProp);
-sharetotwitter.exampleProp = "This is a test value";
-
-if (Ti.Platform.name == "android") {
-	var proxy = sharetotwitter.createExample({
-		message: "Creating an example Proxy",
-		backgroundColor: "red",
-		width: 100,
-		height: 100,
-		top: 100,
-		left: 150
-	});
-
-	proxy.printMessage("Hello world!");
-	proxy.message = "Hi world!.  It's me again.";
-	proxy.printMessage("Hello world!");
-	win.add(proxy);
+if ( res === false ){
+	alert('Twitter not found on device!');
+} else {
+	alert('Twitter open intent activity successfully sent');
 }
-
