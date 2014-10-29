@@ -25,3 +25,6 @@ if ( res === false ){
 
 ####share( String text )
 * text    - What you want to share
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/joseandro/sharetotwitter/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
